@@ -12,7 +12,7 @@ public class Calculadora {
 		Scanner teclado = new Scanner(System.in);
 		do {
 			System.out.println(
-					"Ingrese su operación \n 1 para sumar \n 2 para restar \n 3 para multiplicar \n 4 para dividir");
+					"Ingrese su operaciÃ³n \n 1 para multiplicar \n 2 para restar \n 3 para sumar \n 4 para dividir");
 			opcion = teclado.nextInt();
 		} while (opcion < 1 && opcion > 4);
 		System.out.println("Ingrese el primer numero");
@@ -20,6 +20,7 @@ public class Calculadora {
 
 		System.out.println("Ingrese el segundo numero");
 		b = teclado.nextInt();
+
 
 		switch (opcion) {
 		
@@ -43,6 +44,16 @@ public class Calculadora {
 			
 			resultado = a/b
 			break;
+
+		if (opcion.equals(3)) {
+			resultado = a + b;
+		} else if (opcion.equals(2)) {
+			resultado = a - b;
+		} else if (opcion.equals(1)) {
+			resultado = a * b;
+		} else {
+			resultado = a / b;
+
 		}
 		System.out.println("El resultado es " + resultado.toString());
 	}
