@@ -78,6 +78,7 @@ public class Calculadora {
 		Calculadora r1 = new Calculadora(10, 5);
 
 		Scanner teclado = new Scanner(System.in);
+
 		Integer opcion = 0;
 
 		switch (opcion) {
@@ -142,6 +143,7 @@ public class Calculadora {
 			System.out.println("El resultado es " + r1.division(10, 5));
 
 			break;
+
 
 		}
 	}
