@@ -75,76 +75,60 @@ public class Calculadora {
 
 	public static void main(String[] args) {
 
-		Calculadora r1 = new Calculadora(10, 5);
+		System.out.println("Bienvenidos");
 
-		Scanner teclado = new Scanner(System.in);
+		Calculadora r1 = new Calculadora(10, 5);
 
 		Integer opcion = 0;
 
-		switch (opcion) {
+		Scanner teclado = new Scanner(System.in);
 
-		case 1:
-
-			System.out.println("Ingrese su operación 1 para Sumar");
+		do {
+			System.out.println("************************");
+			System.out.println("Menu de opciones\n");
+			System.out.println("Ingrese 1 para Sumar, 2 para Restar, 3 para Multiplicar, 4 para dividir");
 			opcion = teclado.nextInt();
-
+			System.out.println("************************");
 			System.out.println("Ingrese el primer numero");
 			teclado.nextInt();
-
 			System.out.println("Ingrese el segundo numero");
 			teclado.nextInt();
 
-			System.out.println("El resultado es " + r1.suma(10, 5));
+			switch (opcion) {
 
-			break;
+			case 1:
 
-		case 2:
+				System.out.println("el resultado es: " + r1.suma(10, 5));
 
-			System.out.println("Ingrese su operación 1 para Sumar");
-			opcion = teclado.nextInt();
+				break;
 
-			System.out.println("Ingrese el primer numero");
-			teclado.nextInt();
+			case 2:
 
-			System.out.println("Ingrese el segundo numero");
-			teclado.nextInt();
+				System.out.println("el resultado es: " + r1.resta(10, 5));
 
-			System.out.println("El resultado es " + r1.resta(10, 5));
+				break;
 
-			break;
+			case 3:
 
-		case 3:
+				System.out.println("el resultado es: " + r1.multiplicacion(10, 5));
 
-			System.out.println("Ingrese su operación 1 para Sumar");
-			opcion = teclado.nextInt();
+				break;
 
-			System.out.println("Ingrese el primer numero");
-			teclado.nextInt();
+			case 4:
 
-			System.out.println("Ingrese el segundo numero");
-			teclado.nextInt();
+				System.out.println("el resultado es: " + r1.division(10, 5));
 
-			System.out.println("El resultado es " + r1.multiplicacion(10, 5));
+				break;
 
-			break;
+			default:
 
-		case 4:
+				System.out.println("Opción Invalida");
+				break;
 
-			System.out.println("Ingrese su operación 1 para Sumar");
-			opcion = teclado.nextInt();
+			}
 
-			System.out.println("Ingrese el primer numero");
+		} while (opcion != 5);
 
-			teclado.nextInt();
-
-			System.out.println("Ingrese el segundo numero");
-			teclado.nextInt();
-
-			System.out.println("El resultado es " + r1.division(10, 5));
-
-			break;
-
-
-		}
 	}
+
 }
